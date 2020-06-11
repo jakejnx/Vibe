@@ -6,104 +6,60 @@ export default {
       icon: 'Home',
     },
     {
-      name: 'UI Elements',
-      icon: 'Layers',
+      name: 'Admin',
+      icon: 'Calendar',
       children: [
         {
-          name: 'Buttons',
-          url: '/elements/buttons',
+          name: 'Appointments',
+          url: '/admin/appointments',
         },
         {
-          name: 'Grid',
-          url: '/elements/grid',
+          name: 'Walk-Ins',
+          url: '/admin/walk-in',
         },
         {
-          name: 'Alerts',
-          url: '/elements/alerts',
-        },
-        {
-          name: 'Typography',
-          url: '/elements/typography',
-        },
-        {
-          name: 'Cards',
-          url: '/elements/cards',
-        },
-        {
-          name: 'Tabs',
-          url: '/elements/tabs',
-        },
-        {
-          name: 'Tables',
-          url: '/elements/tables',
-        },
-        {
-          name: 'Breadcrumbs',
-          url: '/elements/breadcrumbs',
-        },
-        {
-          name: 'Forms',
-          url: '/elements/forms',
-        },
-        {
-          name: 'Modals',
-          url: '/elements/modals',
-        },
-        {
-          name: 'Loaders',
-          url: '/elements/loaders',
-        },
-        {
-          name: 'Avatars',
-          url: '/elements/avatars',
-        },
-        {
-          name: 'Progress Bars',
-          url: '/elements/progressbars',
-        },
-        {
-          name: 'Pagination',
-          url: '/elements/pagination',
-        },
+          name: 'Patients',
+          url: '/admin/patients',
+        }
       ],
     },
     {
-      name: 'Pages',
-      icon: 'File',
+      name: 'Consultation',
+      icon: 'Users',
       children: [
         {
-          name: 'Blank',
-          url: '/pages/blank',
+          name: 'Notes',
+          url: '/consultation/notes',
         },
         {
-          name: 'Sub Navigation',
-          url: '/pages/subnav',
+          name: 'Tests',
+          url: '/consultation/tests',
         },
         {
-          name: '404',
-          url: '/pages/404',
+          name: 'Prescriptions',
+          url: '/consultation/prescriptions',
         },
+        {
+          name: 'Coding',
+          url: '/consultation/coding',
+        }
       ],
     },
     {
-      name: 'Apps',
-      icon: 'Cloud',
+      name: 'Results',
+      icon: 'Plus',
       children: [
         {
-          name: 'Analytics',
-          url: '/apps/analytics',
+          name: 'Search',
+          url: '/results/search',
         },
         {
-          name: 'Invoice',
-          url: '/apps/invoice',
+          name: 'Positive List',
+          url: '/results/positives',
         },
         {
-          name: 'Activity Feed',
-          url: '/apps/feed',
-        },
-        {
-          name: 'CMS',
-          url: '/apps/cms',
+          name: 'Recall',
+          url: '/results/recall',
         },
       ],
     },
@@ -111,22 +67,15 @@ export default {
       divider: true,
     },
     {
-      name: 'Widgets',
+      name: 'Help',
       url: '/widgets',
-      icon: 'Package',
+      icon: 'Heart',
       badge: {
-        text: 'NEW',
+        text: 'hey',
       },
     },
   ],
   bottom: [
-    {
-      name: 'Get Vibe',
-      url: 'https://github.com/NiceDash/Vibe',
-      icon: 'GitHub',
-      external: true,
-      target: '_blank',
-    },
     {
       name: 'Account',
       url: '/dashboard',

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { Button, Badge, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import { Header, SidebarNav, Footer, PageContent, Avatar, Chat, PageAlert, Page } from '../vibe';
-import Logo from '../assets/images/vibe-logo.svg';
+import { Button, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Header, SidebarNav, Footer, PageContent, Chat, PageAlert, Page } from '../vibe';
+import Logo from '../assets/images/sash-logo.svg';
 import avatar1 from '../assets/images/avatar1.png';
 import nav from '../_nav';
 import routes from '../views';
@@ -64,7 +64,7 @@ export default class DashboardLayout extends Component {
             <SidebarNav
               nav={nav}
               logo={Logo}
-              logoText="VIBE."
+            //  logoText="VIBE."
               isSidebarCollapsed={sidebarCollapsed}
               toggleSidebar={this.toggleSideCollapse}
               {...this.props}
@@ -89,9 +89,9 @@ export default class DashboardLayout extends Component {
             </Page>
           </div>
           <Footer>
-            <span>Copyright © 2019 Nice Dash. All rights reserved.</span>
+            <span>Copyright © 2020 Super Awesome Sexual Health App &nbsp;</span>
             <span>
-              <a href="#!">Terms</a> | <a href="#!">Privacy Policy</a>
+              <a href="#!">About</a>
             </span>
             <span className="ml-auto hidden-xs">
               Made with{' '}
@@ -116,32 +116,20 @@ function HeaderNav() {
     <React.Fragment>
       <NavItem>
         <form className="form-inline">
-          <input className="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search" />
+          <input className="form-control mr-sm-1" type="search" placeholder="Patient Search" aria-label="Search" />
           <Button type="submit" className="d-none d-sm-block">
             <i className="fa fa-search" />
           </Button>
         </form>
       </NavItem>
-      <UncontrolledDropdown nav inNavbar>
-        <DropdownToggle nav caret>
-          New
-        </DropdownToggle>
-        <DropdownMenu right>
-          <DropdownItem>Project</DropdownItem>
-          <DropdownItem>User</DropdownItem>
-          <DropdownItem divider />
-          <DropdownItem>
-            Message <Badge color="primary">10</Badge>
-          </DropdownItem>
-        </DropdownMenu>
-      </UncontrolledDropdown>
+
       <UncontrolledDropdown nav inNavbar>
         <DropdownToggle nav>
-          <Avatar size="small" color="blue" initials="JS" />
+          <span class="jnpt">M100234</span>
         </DropdownToggle>
         <DropdownMenu right>
-          <DropdownItem>Option 1</DropdownItem>
-          <DropdownItem>Option 2</DropdownItem>
+          <DropdownItem>Message</DropdownItem>
+          <DropdownItem>Logs</DropdownItem>
           <DropdownItem divider />
           <DropdownItem>Reset</DropdownItem>
         </DropdownMenu>

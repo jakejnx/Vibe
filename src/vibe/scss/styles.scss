@@ -1,2 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 @import './components/index';
+
+.site-logo-bar .navbar-brand > img {
+    max-width: 200px !important;
+    max-height: 500px !important;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}

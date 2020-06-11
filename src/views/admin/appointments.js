@@ -3,11 +3,11 @@ import { SubNavigation } from '../../vibe';
 
 const NAV = [
   {
-    name: 'Sub Navigation',
+    name: 'Today',
     url: '/pages/subnav'
   },
   {
-    name: 'Messages',
+    name: 'This Week',
     url: '/#'
   }
 ];

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import reactFeature from '../../assets/images/react-feature.svg';
 import sassFeature from '../../assets/images/sass-feature.svg';
 import bootstrapFeature from '../../assets/images/bootstrap-feature.svg';
-import responsiveFeature from '../../assets/images/responsive-feature.svg';
+// import responsiveFeature from '../../assets/images/responsive-feature.svg';
 import { Card, CardBody, Row, Col } from 'reactstrap';
 
 class Dashboard extends Component {
@@ -16,10 +16,9 @@ class Dashboard extends Component {
         <Row>
           <Col md={6}>
             <div className="home-hero" style={heroStyles}>
-              <h1>Welcome to Vibe.</h1>
+              <h1>Welcome to</h1> <img src="/assets/images/sash-logo.svg" alt="SASH - Super Awesome Sexual Health App"></img>
               <p className="text-muted">
-                Discover this UI dashboard framework that will help speed up
-                your next web application project.
+                Our Super Awesome Sexual Health Application.
               </p>
             </div>
           </Col>
@@ -35,9 +34,9 @@ class Dashboard extends Component {
                   aria-hidden={true}
                 />
                 <div className="m-l">
-                  <h2 className="h4">React.js</h2>
+                  <h2 className="h4">Today in Clinic</h2>
                   <p className="text-muted">
-                    Built to quickly get your MVPs off the ground.
+                    Stats
                   </p>
                 </div>
               </CardBody>
@@ -53,7 +52,7 @@ class Dashboard extends Component {
                   aria-hidden={true}
                 />
                 <div className="m-l">
-                  <h2 className="h4">Bootstrap 4</h2>
+                  <h2 className="h4">Who's Online</h2>
                   <p className="text-muted">
                     The most popular framework to get your layouts built.
                   </p>
@@ -62,8 +61,9 @@ class Dashboard extends Component {
             </Card>
           </Col>
         </Row>
+        
         <Row>
-          <Col md={6}>
+          <Col xs={12}>
             <Card>
               <CardBody className="display-flex">
                 <img
@@ -73,32 +73,15 @@ class Dashboard extends Component {
                   aria-hidden={true}
                 />
                 <div className="m-l">
-                  <h2 className="h4">Sass</h2>
+                  <h2 className="h4">Announcements</h2>
                   <p className="text-muted">
-                    Easily change the design system styles to fit your needs.
+                    Messages to staff.
                   </p>
                 </div>
               </CardBody>
             </Card>
           </Col>
-          <Col md={6}>
-            <Card>
-              <CardBody className="display-flex">
-                <img
-                  src={responsiveFeature}
-                  style={{ width: 70, height: 70 }}
-                  alt="Responsive"
-                  aria-hidden={true}
-                />
-                <div className="m-l">
-                  <h2 className="h4">Responsive</h2>
-                  <p className="text-muted">
-                    Designed for screens of all sizes.
-                  </p>
-                </div>
-              </CardBody>
-            </Card>
-          </Col>
+        
         </Row>
       </div>
     );
