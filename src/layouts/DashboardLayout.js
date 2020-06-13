@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { Button, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import { Header, SidebarNav, Footer, PageContent, Chat, PageAlert, Page } from '../vibe';
+import { Header, SidebarNav, Footer, PageContent, PageAlert, Page } from '../vibe';
 import Logo from '../assets/images/sash-logo.svg';
-import avatar1 from '../assets/images/avatar1.png';
 import nav from '../_nav';
 import routes from '../views';
 import ContextProviders from '../vibe/components/utilities/ContextProviders';
@@ -17,7 +16,7 @@ export default class DashboardLayout extends Component {
     this.state = {
       sidebarCollapsed: false,
       isMobile: window.innerWidth <= MOBILE_SIZE,
-      showChat1: true,
+      showChat1: false,
     };
   }
 
@@ -45,9 +44,6 @@ export default class DashboardLayout extends Component {
     window.removeEventListener('resize', this.handleResize);
   }
 
-  toggleSideCollapse = () => {
-    this.setState(prevState => ({ sidebarCollapsed: !prevState.sidebarCollapsed }));
-  };
 
   closeChat = () => {
     this.setState({ showChat1: false });
@@ -58,7 +54,7 @@ export default class DashboardLayout extends Component {
     const sidebarCollapsedClass = sidebarCollapsed ? 'side-menu-collapsed' : '';
     return (
       <ContextProviders>
-        <div className={`app ${sidebarCollapsedClass}`}>
+       <div className={`app ${sidebarCollapsedClass}`}>
           <PageAlert />
           <div className="app-body">
             <SidebarNav
@@ -89,22 +85,16 @@ export default class DashboardLayout extends Component {
             </Page>
           </div>
           <Footer>
-            <span>Copyright © 2020 Super Awesome Sexual Health App &nbsp;</span>
-            <span>
-              <a href="#!">About</a>
-            </span>
+      
+            
             <span className="ml-auto hidden-xs">
-              Made with{' '}
+              <a href="https://get.sash.cloud">About SASH</a>{' '}
               <span role="img" aria-label="taco">
                 🌮
               </span>
             </span>
           </Footer>
-          <Chat.Container>
-            {this.state.showChat1 && (
-              <Chat.ChatBox name="Messages" status="online" image={avatar1} close={this.closeChat} />
-            )}
-          </Chat.Container>
+         
         </div>
       </ContextProviders>
     );
@@ -114,9 +104,11 @@ export default class DashboardLayout extends Component {
 function HeaderNav() {
   return (
     <React.Fragment>
+    <NavItem><button type="button" class="btn btn-success">Patient: <b>M100234</b></button> &nbsp;</NavItem>
       <NavItem>
         <form className="form-inline">
           <input className="form-control mr-sm-1" type="search" placeholder="Patient Search" aria-label="Search" />
+         
           <Button type="submit" className="d-none d-sm-block">
             <i className="fa fa-search" />
           </Button>
@@ -125,7 +117,7 @@ function HeaderNav() {
 
       <UncontrolledDropdown nav inNavbar>
         <DropdownToggle nav>
-          <span class="jnpt">M100234</span>
+          Menu
         </DropdownToggle>
         <DropdownMenu right>
           <DropdownItem>Message</DropdownItem>

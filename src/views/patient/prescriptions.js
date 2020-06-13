@@ -3,13 +3,17 @@ import { SubNavigation } from '../../vibe';
 
 const NAV = [
   {
-    name: 'Today',
-    url: '/pages/subnav'
+    name: 'Notes',
+    url: '/patient/notes'
   },
   {
-    name: 'This Week',
-    url: '/#'
-  }
+    name: 'Prescriptions',
+    url: '/patient/prescriptions'
+  },
+  {
+    name: 'Coding',
+    url: '/patient/coding'
+  },
 ];
 
 export default function SubNav() {

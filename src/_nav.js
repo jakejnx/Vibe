@@ -1,89 +1,102 @@
 export default {
   top: [
-    {
-      name: 'Home',
-      url: '/home',
-      icon: 'Home',
-    },
-    {
-      name: 'Admin',
-      icon: 'Calendar',
-      children: [
         {
-          name: 'Appointments',
-          url: '/admin/appointments',
+          name: 'Clinics',
+          url: '/home',
+          icon: 'Clock',
+                badge: {
+        variant: 'clinic',
+        text: '25',
+      },
         },
         {
           name: 'Walk-Ins',
-          url: '/admin/walk-in',
+          url: '/walk-ins',
+          icon: 'Users',
+          badge: {
+        variant: 'walk',
+        text: '3',
+      },
         },
-        {
-          name: 'Patients',
-          url: '/admin/patients',
-        }
-      ],
+                {
+          divider: true,
+        },
+    {
+      name: 'Appointments',
+      url: '/patient/appointments',
+      icon: 'Calendar',
+    },
+    {
+      name: 'Communications',
+      url: '/patient/communications',
+      icon: 'Mail',
     },
     {
       name: 'Consultation',
-      icon: 'Users',
+      icon: 'Briefcase',
       children: [
         {
           name: 'Notes',
-          url: '/consultation/notes',
-        },
-        {
-          name: 'Tests',
-          url: '/consultation/tests',
+          url: '/patient/notes'
         },
         {
           name: 'Prescriptions',
-          url: '/consultation/prescriptions',
+          url: '/patient/prescriptions',
         },
         {
           name: 'Coding',
-          url: '/consultation/coding',
-        }
-      ],
+          url: '/patient/coding',
+        },
+      ]
     },
     {
       name: 'Results',
+      url: '/patient/results',
+      icon: 'Filter',
+  },
+  {
+    name: 'Logs',
+    url: '/patient/logs',
+    icon: 'Eye',
+},
+
+  {
+    divider: true,
+  },
+
+    {
+      name: 'Lists',
       icon: 'Plus',
       children: [
         {
-          name: 'Search',
-          url: '/results/search',
+          name: 'Patients',
+          url: '/lists/patients',
         },
         {
-          name: 'Positive List',
-          url: '/results/positives',
+          name: 'Safeguarding',
+          url: '/lists/safeguarding',
+        },
+        {
+          name: 'Positive Results',
+          url: '/lists/positives',
         },
         {
           name: 'Recall',
-          url: '/results/recall',
+          url: '/lists/recall',
         },
       ],
-    },
-    {
-      divider: true,
-    },
-    {
-      name: 'Help',
-      url: '/widgets',
-      icon: 'Heart',
-      badge: {
-        text: 'hey',
-      },
     },
   ],
   bottom: [
     {
+      name: 'Help',
+      url: '/widgets',
+      icon: 'Heart',
+    },
+    {
       name: 'Account',
       url: '/dashboard',
       icon: 'User',
-      badge: {
-        variant: 'success',
-        text: '3',
-      },
     },
   ],
 };

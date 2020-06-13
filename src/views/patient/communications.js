@@ -3,7 +3,7 @@ import React from 'react';
 const BlankPage = () => {
   return (
     <div>
-      <span />
+      A timeline showing Push, Email, SMS and Letters
     </div>
   );
 };

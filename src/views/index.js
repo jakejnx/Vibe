@@ -1,73 +1,91 @@
-import Dashboard from './pages/Dashboard';
+import Clinic from './Clinic';
+import WalkIn from './walk-ins';
 
-import Appointments from './admin/appointments';
-import WalkIn from './admin/walk-ins';
-import Patients from './admin/patients';
+import Appointments from './patient/appointments';
+import Communications from './patient/communications';
+import Consultation from './patient/notes';
+import Results from './patient/results';
+import Logs from './patient/logs';
 
-import Notes from './consultation/notes';
-import Tests from './consultation/tests';
-import Prescriptions from './consultation/prescriptions';
-import Coding from './consultation/coding';
+import Tests from './patient/tests';
+import Prescriptions from './patient/prescriptions';
+import Coding from './patient/coding';
 
-import RSearch from './results/search';
-import Positives from './results/positives';
-import Recall from './results/recall';
+import Patients from './lists/patients';
+import Safeguarding from './lists/safeguarding';
+import Positives from './lists/positives';
+import Recall from './lists/recall';
 
 // See React Router documentation for details: https://reacttraining.com/react-router/web/api/Route
 const pageList = [
   {
-    name: 'Home',
+    name: 'Clinics',
     path: '/home',
-    component: Dashboard,
+    component: Clinic,
   },
     {
     name: 'Appointments',
-    path: '/admin/appointments',
+    path: '/patient/appointments',
     component: Appointments,
   },
   {
     name: 'Walk-Ins',
-    path: '/admin/walk-in',
+    path: '/walk-ins',
     component: WalkIn,
   },
   {
+    name: 'Communications',
+    path: '/patient/communications',
+    component: Communications,
+  },
+  {
+    name: 'Logs',
+    path: '/patient/logs',
+    component: Logs,
+  },
+  {
     name: 'Patients',
-    path: '/admin/patients',
+    path: '/lists/patients',
     component: Patients,
   },
   {
-    name: 'Notes',
-    path: '/consultation/notes',
-    component: Notes,
+    name: 'Consultation',
+    path: '/patient/notes',
+    component: Consultation,
   },
   {
-    name: 'Tests',
-    path: '/consultation/tests',
-    component: Tests,
+    name: 'Results',
+    path: '/patient/results',
+    component: Results,
   },
   {
     name: 'Prescriptions',
-    path: '/consultation/prescriptions',
+    path: '/patient/prescriptions',
     component: Prescriptions,
   },
   {
     name: 'Coding',
-    path: '/consultation/coding',
+    path: '/patient/coding',
     component: Coding,
   },
   {
-    name: 'Result Search',
-    path: '/results/search',
-    component: RSearch,
+    name: 'Test Requests',
+    path: '/patient/tests',
+    component: Tests,
   },
   {
-    name: 'Positive Result List',
-    path: '/results/positives',
+    name: 'Safeguarding',
+    path: '/lists/safeguarding',
+    component: Safeguarding,
+  },
+  {
+    name: 'Positive Results',
+    path: '/lists/positives',
     component: Positives,
   },
   {
-    name: 'Recall List',
-    path: '/results/recall',
+    name: 'Recall',
+    path: '/lists/recall',
     component: Recall,
   },
 ];

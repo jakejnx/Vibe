@@ -7,3 +7,17 @@
     padding-top: 20px;
     padding-bottom: 30px;
 }
+
+.badge-clinic {
+    background: yellow !important;
+    color: #000;
+}
+
+.badge-walk {
+    background: orange !important;
+    color: #000;
+}
+
+button.m-r.sidebar-toggle.is-not-collapsed.btn.btn-secondary {
+    display: none;
+}

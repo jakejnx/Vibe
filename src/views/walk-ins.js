@@ -3,7 +3,7 @@ import React from 'react';
 const BlankPage = () => {
   return (
     <div>
-      <span />
+      This would show patients who have walked-in without an appointment.
     </div>
   );
 };
